@@ -1,0 +1,40 @@
+.author {
+    border-bottom: 1px solid #C3B1A5;
+}
+
+.author__title {
+    margin-bottom: 60px;
+    padding-top: 100px;
+}
+
+.author__list {
+    margin-bottom: 16px;
+}
+
+.author__box {
+    margin-bottom: 100px;
+}
+
+.author__material {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.author__contacts {
+    margin-bottom: 60px;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.author__box {
+    display: flex;
+
+    .link:first-child {
+        margin-right: 50px;
+    }
+
+    .link:nth-child(2) {
+        margin-right: 50px;
+    }
+}

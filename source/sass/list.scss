@@ -18,4 +18,13 @@
     &:not(:last-child) {
         margin-bottom: 24px;
     }
+
+    &--author {
+        padding-left: 20px;
+
+        & svg {
+            width: 11px;
+            height: 16px;
+        }
+    }
 }
