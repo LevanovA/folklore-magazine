@@ -1,6 +1,18 @@
 .title {
-    font-size: 34px;
-    line-height: 44px;
+    position: relative;
+    font-family: $font-second;
     font-weight: bold;
-    color: $c-text-main;
+    font-size: 36px;
+    line-height: 47px;
+    text-transform: uppercase;
+    color: #8D848A;
+
+    &:after {
+        @include pseudo();
+        left: 0;
+        bottom: 0;
+        width: 46px;
+        height: 1px;
+        background-color: #D27448;
+    }
 }

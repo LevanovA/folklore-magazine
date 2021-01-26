@@ -1,0 +1,21 @@
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.list__item {
+    position: relative;
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 32px;
+
+    & svg {
+        position: absolute;
+        left: 0;
+        top: 9px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 24px;
+    }
+}

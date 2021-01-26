@@ -3,4 +3,45 @@
     padding: 0 20px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    &--decorate {
+        display: flex;
+    }
+}
+
+.wrapper__strip {
+    position: relative;
+    flex-shrink: 0;
+    width: 75px;
+    background: transparent;
+    border-right: 1px solid #C3B1A5;
+    border-left: 1px solid #C3B1A5;
+
+    &:before {
+        @include pseudo;
+        bottom: 0;
+        left: 0;
+        transform: translate(-50%, 50%);
+        width: 11px;
+        height: 11px;
+        border: 1px solid #C3B1A5;
+        border-radius: 50%;
+    }
+
+    &:after {
+        @include pseudo;
+        bottom: 0;
+        right: 0;
+        transform: translate(50%, 50%);
+        width: 11px;
+        height: 11px;
+        border: 1px solid #C3B1A5;
+        border-radius: 50%;
+    }
+}
+
+.wrapper__box {
+    flex-grow: 1;
+    padding: 0 50px;
+    position: relative;
 }
