@@ -15,6 +15,10 @@
 .archive__form {
     display: flex;
     margin-bottom: 48px;
+
+    @include phones__480 {
+        flex-direction: column;
+    }
 }
 
 .archive__search {
@@ -25,6 +29,10 @@
     line-height: 19px;
     border: 1px solid #C3B1A5;
     outline: none;
+
+    @include phones__480 {
+        margin-bottom: 20px;
+    }
 }
 
 .archive__button {
@@ -55,6 +63,10 @@
     @include phones__768 {
         margin-bottom: 40px;
     }
+
+    @include phones__480 {
+        flex-direction: column;
+    }
 }
 
 .archive__item {
@@ -65,6 +77,11 @@
 
     @include tablets_1024 {
         flex-direction: column;
+    }
+
+    @include phones__480 {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     &:not(:last-child) {

@@ -1,21 +1,37 @@
 .footer {
     padding-top: 100px;
     background-color: #F4F4F4;
+
+    @include phones__768 {
+        padding-top: 40px;
+    }
 }
 
 .footer__menu {
     padding-bottom: 140px;
     border-bottom: 1px solid #D27448;
+
+    @include phones__768 {
+        padding-bottom: 40px;
+    }
 }
 
 .footer__box {
     display: flex;
     justify-content: space-between;
+
+    @include phones__768 {
+        flex-wrap: wrap;
+    }
 }
 
 .footer__list {
     margin: 0;
     padding: 0;
+
+    @include phones__768 {
+        margin-right: 15px;
+    }
 }
 
 .footer__item {
@@ -43,6 +59,11 @@
 
     @include tablets_1024 {
         flex-direction: column;
+    }
+
+    @include phones__768 {
+        padding-top: 40px;
+        margin-bottom: 40px;
     }
 }
 

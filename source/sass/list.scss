@@ -18,6 +18,10 @@
         position: absolute;
         left: 0;
         top: 9px;
+
+        @include phones__768 {
+            top: 4px;
+        }
     }
 
     &:not(:last-child) {

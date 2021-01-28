@@ -26,6 +26,10 @@
     @include tablets_950 {
         margin-right: 20px;
     }
+
+    @include phones__480 {
+        margin-right: 10px;
+    }
 }
 
 .menu__list {

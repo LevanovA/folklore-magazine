@@ -41,6 +41,10 @@
         @include tablets_1024 {
             margin-bottom: 30px;
         }
+
+        @media screen and (max-width: 479px) {
+            width: 100%;
+        }
     }
 }
 
@@ -59,6 +63,11 @@
     margin-bottom: 40px;
     font-size: 20px;
     line-height: 32px;
+
+    @include phones__768 {
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 .editor__box {

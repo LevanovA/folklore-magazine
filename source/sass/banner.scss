@@ -4,6 +4,10 @@
     background-repeat: no-repeat;
     background-color: rgba(48, 48, 48, 0.7);
     backdrop-filter: blur(5px);
+
+    @include phones__480 {
+        padding-bottom: 40px;
+    }
 }
 
 .banner__img {
