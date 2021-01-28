@@ -5,6 +5,11 @@
 .author__title {
     margin-bottom: 60px;
     padding-top: 100px;
+
+    @include phones__768 {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
 }
 
 .author__list {
@@ -13,6 +18,10 @@
 
 .author__box {
     margin-bottom: 100px;
+
+    @include phones__768 {
+        margin-bottom: 40px;
+    }
 }
 
 .author__material {
@@ -30,11 +39,25 @@
 .author__box {
     display: flex;
 
+    @include desktop_1366 {
+        flex-direction: column;
+    }
+
     .link:first-child {
         margin-right: 50px;
+
+        @include desktop_1366 {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 
     .link:nth-child(2) {
         margin-right: 50px;
+
+        @include desktop_1366 {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 }

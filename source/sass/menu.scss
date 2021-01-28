@@ -4,6 +4,10 @@
     align-items: center;
     height: 90px;
 
+    @include desktop_1366 {
+        height: 136px;
+    }
+
     @include tablets_1024 {
         height: auto;
         min-height: 80px;
@@ -11,8 +15,17 @@
     }
 }
 
+.menu__left {
+    display: flex;
+    align-items: center;
+}
+
 .menu__logo {
     margin-right: 50px;
+
+    @include tablets_950 {
+        margin-right: 20px;
+    }
 }
 
 .menu__list {
@@ -23,21 +36,43 @@
     height: 100%;
 
     @include desktop_1366 {
-        width: 80%;
-    }
-
-    @include tablets_1024 {
-        display: none;
         flex-direction: column;
+        align-items: flex-start;
     }
 
-    @include phones__768 {
+    //@include phones__768 {
+    //    position: absolute;
+    //    top: 92px;
+    //    left: 0;
+    //    background: linear-gradient(90deg, #F1EDE6 0%, #FAF8F3 100%);
+    //    width: 100%;
+    //    height: auto;
+    //}
+
+    &--desktop {
+        @include desktop_1366 {
+            display: none;
+        }
+    }
+}
+
+.menu__box {
+    display: none;
+
+    @include desktop_1366 {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    @include tablets_950 {
+        display: none;
         position: absolute;
-        top: 92px;
+        top: 100px;
         left: 0;
-        background: linear-gradient(90deg, #F1EDE6 0%, #FAF8F3 100%);
+        z-index: 10;
         width: 100%;
-        height: auto;
+        background-color: #ffffff;
     }
 }
 
@@ -64,6 +99,10 @@
         background-color: #ffffff;
     }
 
+    @include desktop_1366 {
+        margin-bottom: 12px;
+    }
+
     @include tablets_1024 {
         display: block;
         height: auto;
@@ -78,15 +117,13 @@
 
     &:last-child {
 
+        @include desktop_1366 {
+            margin-bottom: 0;
+        }
+
         @include phones__768 {
             padding-bottom: 10px;
         }
-    }
-}
-
-.menu__item:not(:last-child) {
-    @include tablets_1024 {
-        margin-bottom: 20px;
     }
 }
 
@@ -123,6 +160,7 @@
 .menu__link {
     display: flex;
     align-items: center;
+    font-family: $font-second;
     font-size: 14px;
     line-height: 21px;
     color: $c-text-main;
@@ -138,9 +176,20 @@
         }
     }
 
+    @media screen and (max-width: 1445px) {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    @include desktop_1366 {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
     @include tablets_1024 {
         justify-content: center;
     }
+
     &.active {
         color: $c-link-main;
     }

@@ -1,0 +1,54 @@
+.burger {
+    display: none;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border: 1px solid #d27448;
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    @include tablets_950 {
+        display: block;
+        margin-right: 10px;
+    }
+}
+
+.burger__strip,
+.burger__strip:before,
+.burger__strip:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -10px;
+    width: 20px;
+    height: 2px;
+    background-color: #d27448;
+}
+
+.burger__strip:before,
+.burger__strip:after {
+    content: "";
+    transition: 0.3s;
+}
+
+.burger__strip:before {
+    transform: translateY(-5px);
+}
+
+.burger__strip:after {
+    transform: translateY(5px);
+}
+
+.burger--active .burger__strip {
+    height: 0;
+}
+
+.burger--active .burger__strip:before {
+    transform: rotate(45deg);
+}
+
+.burger--active .burger__strip:after {
+    transform: rotate(-45deg);
+}

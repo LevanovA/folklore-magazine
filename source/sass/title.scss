@@ -7,6 +7,11 @@
     text-transform: uppercase;
     color: #8D848A;
 
+    @include phones__768 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
     &:after {
         @include pseudo();
         left: 0;

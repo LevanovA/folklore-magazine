@@ -1,11 +1,12 @@
 .partners__menu {
     display: flex;
     margin-bottom: 64px;
-    padding: 120px 50px 24px 0;
+    padding: 120px 0 24px 0;
 
-    @include phones__768 {
+    @media screen and (max-width: 1200px) {
         flex-direction: column;
         max-width: 100%;
+        margin-bottom: 30px;
         padding: 40px 0 12px 0;
     }
 }
@@ -13,8 +14,8 @@
 .partners__name {
     position: relative;
     font-family: $font-second;
-    font-size: 36px;
-    line-height: 47px;
+    font-size: 34px;
+    line-height: 44px;
     text-transform: uppercase;
     color: #8D848A;
     transition: 0.5s;
@@ -23,10 +24,19 @@
     &:first-child {
         padding-right: 20px;
         border-right: 1px solid #D27448;
+
+        @media screen and (max-width: 1200px) {
+            padding-right: 0;
+            border-right: none;
+        }
     }
 
     &:last-child {
         padding-left: 20px;
+
+        @media screen and (max-width: 1200px) {
+            padding-left: 0;
+        }
     }
 
     &--active {
@@ -43,6 +53,10 @@
 
         &:nth-child(2):after {
             left: 20px;
+
+            @media screen and (max-width: 1200px) {
+                left: 0;
+            }
         }
     }
 
@@ -52,6 +66,10 @@
 
     @include desktop_1366 {
         font-size: 30px;
+    }
+
+    @include tablets_1024 {
+        font-size: 25px;
     }
 
     @include phones__768 {
@@ -92,6 +110,10 @@
     width: 20%;
     margin-bottom: 80px;
     padding: 0 20px;
+
+    @include tablets_1024 {
+        width: 33.25%;
+    }
 
     @include phones__768 {
         width: 50%;

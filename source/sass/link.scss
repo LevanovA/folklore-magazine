@@ -10,6 +10,11 @@
     cursor: pointer;
     transition: 0.5s;
 
+    @include tablets_1024 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
     & svg {
         margin-left: 12px;
         fill: $c-link-main;

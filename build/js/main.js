@@ -1,3 +1,13 @@
+'use strict';
+
+$(document).ready(function(){
+
+    $('.burger').on('click', function(){
+        $(this).toggleClass('burger--active')
+        $('.menu__box').slideToggle(400)
+    });
+});
+
 'use strick'
 
 $('.button--modal-open').on('click', function () {

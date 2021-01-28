@@ -5,21 +5,42 @@
 .editor__title {
     margin-bottom: 60px;
     padding-top: 100px;
+
+    @include phones__768 {
+        padding-top: 40px;
+        margin-bottom: 40px;
+    }
 }
 
 .editor__flex {
     display: flex;
     margin-bottom: 100px;
+
+    @include tablets_1024 {
+        flex-direction: column-reverse;
+    }
+
+    @include phones__768 {
+        margin-bottom: 40px;
+    }
 }
 
 .editor__el {
     &:first-child {
         flex-grow: 1;
         margin-right: 60px;
+
+        @include tablets_1024 {
+            margin-right: 0;
+        }
     }
     &:last-child {
         width: 35%;
         flex-shrink: 0;
+
+        @include tablets_1024 {
+            margin-bottom: 30px;
+        }
     }
 }
 
@@ -43,7 +64,16 @@
 .editor__box {
     display: flex;
 
+    @include desktop_1366 {
+        flex-direction: column;
+    }
+
     .link:first-child {
         margin-right: 50px;
+
+        @include desktop_1366 {
+            margin-right: 0;
+            margin-bottom: 20px;
+        }
     }
 }

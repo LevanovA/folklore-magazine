@@ -3,10 +3,25 @@
 
     &:nth-child(2n+1) {
         border-right: 1px solid #C3B1A5;
+
+        @include tablets_1024 {
+            border-right: none;
+        }
     }
 
     &:nth-child(1),
     &:nth-child(2) {
+        border-bottom: 1px solid #C3B1A5;
+    }
+
+    &:last-child {
+        @include tablets_1024 {
+            border-bottom: none;
+        }
+    }
+
+    @include tablets_1024 {
+        width: 100%;
         border-bottom: 1px solid #C3B1A5;
     }
 
@@ -19,6 +34,10 @@
     display: flex;
     flex-wrap: wrap;
     border: 1px solid #C3B1A5;
+
+    @include tablets_1024 {
+        flex-direction: column;
+    }
 }
 
 .card__flex {
@@ -29,6 +48,7 @@
 }
 
 .card__block {
+    padding-bottom: 10px;
 
     &:first-child {
         flex-shrink: 0;

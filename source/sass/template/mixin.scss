@@ -36,6 +36,12 @@ $z-indexes: (
     }
 }
 
+@mixin tablets_950 {
+    @media screen and (max-width: 950px) {
+        @content;
+    }
+}
+
 @mixin phones__768 {
     @media screen and (max-width: 767px) {
         @content;
