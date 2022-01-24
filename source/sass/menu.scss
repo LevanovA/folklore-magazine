@@ -1,4 +1,5 @@
 .menu {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -29,6 +30,9 @@
 
     @include phones__480 {
         margin-right: 10px;
+    }
+    @media screen and (max-width: 420px){
+        display: none;
     }
 }
 
@@ -72,10 +76,11 @@
     @include tablets_950 {
         display: none;
         position: absolute;
-        top: 100px;
+        top: 90px;
         left: 0;
         z-index: 10;
-        width: 100%;
+        width: calc(100% + 40px);
+        margin-left: -20px;
         background-color: #ffffff;
     }
 }
@@ -271,4 +276,127 @@
     border-right: 1px solid $c-border;
     border-bottom: 1px solid $c-border;
     transform: rotate(45deg);
+}
+
+/*Изменения для активации поиска*/
+.menu__list--search-active {
+    opacity: 0;
+    /*width: 100%;*/
+}
+
+.menu__login--search-active {
+    display: none;
+}
+
+.menu__user--search-active {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    margin-left: 0;
+}
+
+.menu__languages--search-active {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    /*width: 100%;*/
+}
+
+.menu__search {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    /*width: 100%;*/
+}
+
+.menu__search-form {
+    display: flex;
+    align-items: center;
+    width: 33px;
+    transition: 0.5s;
+
+    @include tablets_1024 {
+        width: 20px;
+        height: auto;
+    }
+}
+
+.menu__search-form--search-active {
+    width: 100%;
+    border-bottom: 1px solid #525252;
+    transition: 0.5s;
+}
+
+.menu__search-icon {
+    flex-shrink: 0;
+    cursor: pointer;
+
+    @include tablets_1024 {
+        width: 20px;
+        height: auto;
+    }
+}
+
+.menu__search-form--search-active .menu__search-icon {
+    margin-right: 24px;
+
+    @include tablets_1024 {
+        margin-right: 12px;
+    }
+}
+
+.menu__search-input {
+    display: none;
+    font-size: 30px;
+    line-height: 40px;
+    color: #525252;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    @include tablets_1024 {
+        font-size: 18px;
+        line-height: 24px;
+        min-width: 100px;
+    }
+}
+
+.menu__search-form--search-active .menu__search-input {
+    display: block;
+    flex-grow: 1;
+    margin-right: 24px;
+
+    @include tablets_1024 {
+        margin-right: 12px;
+    }
+}
+
+.menu__search-close {
+    display: none;
+    flex-shrink: 0;
+    cursor: pointer;
+
+    @include tablets_1024 {
+        width: 18px;
+        height: auto;
+    }
+}
+
+.menu__search-form--search-active .menu__search-close {
+    display: block;
+}
+
+.menu__user--search-active .menu__articles {
+    display: none;
+}
+
+.menu__user--search-active .menu__search {
+    width: 100%;
+}
+
+.menu__left--search-active {
+    opacity: 0;
+    visibility: hidden;
 }
